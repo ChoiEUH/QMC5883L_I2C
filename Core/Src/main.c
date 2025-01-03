@@ -29,7 +29,7 @@ int main(void)
   MX_USART3_UART_Init();
   MX_I2C1_Init();
 
-  HAL_I2C_Mem_Write(&hi2c1,0x1A,0x0B,1,&set_data[0],1,100);
+  HAL_I2C_Mem_Write(&hi2c1,0x1A,0x0B,1,&set_data[0],1,100); //본래 Device 주소는 0x0D지만 1비트를 왼쪽으로 쉬프트 하며 0x1A가 됨//
   HAL_I2C_Mem_Write(&hi2c1,0x1A,0x09,1,&set_data[1],1,100);
 
 
